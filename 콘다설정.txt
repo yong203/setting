@@ -1,0 +1,79 @@
+https://geuninote.tistory.com/98
+https://richwind.co.kr/126
+
+conda --version
+conda update conda
+conda create --name testFirst python=3.12
+conda env remove -n testFirst : 가상환경 삭제
+
+conda create --name <복사하여 생성할 가상환경명> --clone <복사할 가상환경명> :
+ex) conda create --name NewProject --clone OldProject : OldProject를 복사하여 NewProject로 생성함
+
+생성된 가상환경 목록 확인
+conda info  --envs
+conda env list
+
+가상환경 활성화 비솰성화
+conda activate testFirst
+conda deactivate
+
+
+conda install numpy pandas
+conda install tensorflow-gpu==1.13.1
+conda remove scipy
+conda update scipy
+
+
+
+pip install --upgrade pip
+pip install numpy pandas
+
+가상환경 초기화
+conda clean -a
+
+
+
+
+
+
+가상환경에 주피터 노트북 설치(가상환경 연결된 상태에서)
+pip install jupyter notebook
+pip install jupyter
+pip install ipykernel
+
+
+가상환경 연결된 상태에서 아래 코드 치면 파이썬 interperter로 선택하기 가능(커널연결)
+python -m ipykernel install --user --name testFirst --display-name "testFirst"
+
+커널 확인
+jupyter kernelspec list
+
+커널연결 해제(가상환경 삭제랑 다름)
+jupyter kernelspec remove testFirst
+
+
+
+conda list : 현재 가상환경에서 설치되어있는 패키지 보기
+
+
+python --version : 파이썬 버전 확인
+
+
+
+vscode에서 파이썬 interperter 변경
+Python: Select Interpreter
+
+
+
+파이썬 requirements 생성
+pip freeze > requirements.txt
+or
+pip list --format=freeze > requirements.txt
+
+requirements 설치
+pip install -r requirements.txt
+
+
+
+
+

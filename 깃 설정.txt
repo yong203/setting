@@ -1,0 +1,58 @@
+# 기본 브랜치명 변경
+git config --global init.defaultBranch main
+
+echo "# test" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/yong203/test.git
+git push -u origin main
+
+# git 상태 확인
+git status
+
+
+# firstbranch 생성
+git branch firstbranch
+
+# branch 이동
+git checkout nextbranch
+
+
+# secondbranch 삭제
+git branch -D secondbranch
+
+
+
+git add .
+git commit -m 'first commit'
+git push
+
+
+# git push할때 git push --set-upstream origin secondbranch 라고 오류뜨는 이유
+secondbranch가 로컬에만 존재하고 깃헙에는 없기때문
+git push --set-upstream origin secondbranch 입력하면 깃헙에 secondbranch가 생성됨
+이후, git push origin secondbranch 하면 push됨
+
+# dev branch로 들어감
+git checkout dev
+
+
+
+
+# github repository 생성시 readme파일을 같이 생성하면 다음과 같은 오류 뜸
+# git branch --set-upstream-to=origin/<branch> main 에러
+로컬에 있는 브랜치가 원격 저장소의 어떤 브랜치를 참조할 지 몰라서 나오는 에러
+git branch --set-upstream-to=origin/main main
+
+
+
+# git clone 명령어를 사용하여 Git 저장소를 복제할 때, 기본적으로 master 브랜치가 복제됩니다
+git clone [원격저장소 링크]
+
+
+
+
+#  -b 옵션을 사용하여 다른 브랜치를 복제할 수 있습니다.
+git clone -b [branch명] [원격 저장소 링크]
